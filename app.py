@@ -3,6 +3,10 @@ import joblib
 import pandas as pd
 from sklearn.preprocessing import OneHotEncoder
 
+import os
+
+os.environ['PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION'] = 'python'
+
 # # Load the saved model
 model = joblib.load("compressed_bank_account_prediction_model.pkl")
 
