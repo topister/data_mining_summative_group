@@ -75,10 +75,10 @@ def main():
 
         # Make predictions on test data
         # predictions = model.predict(test_data)
-        st.write(prediction)
+        # st.write(prediction)
 
-        # Show predictions
-        print(prediction)
+        # # Show predictions
+        # print(prediction)
 
         if prediction == ['Yes']:
             st.success("Likelihood of having a bank account: High")
