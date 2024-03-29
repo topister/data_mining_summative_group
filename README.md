@@ -1,6 +1,4 @@
 # Data Mining Summative Group
-> Website: 
-> 
 > [Video Presentation](https://drive.google.com/file/d/1jElLMAhVnVDoy09n7DzQ4wgXV6qD0TxT/view?usp=sharing)
 > 
 > [Deployed App](https://dataminingsummativegroup-4nem8ccs3nfceyhfna45jk.streamlit.app/)
