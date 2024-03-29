@@ -2,6 +2,7 @@ import streamlit as st
 import joblib
 import pandas as pd
 from sklearn.preprocessing import OneHotEncoder
+import datetime
 
 import os
 
@@ -24,13 +25,21 @@ def main():
     #### :bell: This app predicts the likelihood of a person having a bank account.
     """)
 
+    # Get the current year
+    current_year = datetime.datetime.now().year
+
+    # range of years to be displayed
+    start_year = 2016
+
+    # list of years from start_year to current_year
+    years_list = range(start_year, current_year + 1)
     # Add input fields for user to enter data
     country = st.selectbox("Select Country", ["Kenya", "Rwanda", "Tanzania", "Uganda"])
-    year = st.number_input("Enter Year", value=2018)
+    year = st.selectbox("Enter Year", reversed(list(years_list)))
     location_type = st.selectbox("Select Location Type", ["Rural", "Urban"])
     cellphone_access = st.selectbox("Cellphone Access", ["Yes", "No"])
-    household_size = st.number_input("Enter Household Size", value=0)
-    age_of_respondent = st.number_input("Enter Age of Respondent", value=0)
+    household_size = st.number_input("Enter Household Size", min_value=1, max_value=120, value=1)
+    age_of_respondent = st.number_input("Enter Age of Respondent", min_value=18, max_value=120, value=18)
     gender_of_respondent = st.selectbox("Select Gender", ["Male", "Female"])
     relationship_with_head = st.selectbox("Relationship with Head",
                                           ["Head of Household", "Other relative", "Other non-relatives", "Parent",
