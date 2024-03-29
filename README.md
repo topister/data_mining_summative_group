@@ -1,1 +1,1 @@
-# data_mining_summative_group
+# Data Mining Summative Group
